@@ -1,0 +1,125 @@
+/* Define fonts and colors to use */
+:root
+{
+    --dark-bg: #1F2937;
+    --main-color: #F9FAF8;
+    --main-font-size: 48px;
+    --main-font-weight: extra-bold;
+    --secondary-color: #E5E7EB;
+    --secondary-font-size: 18px;
+    --logo-color: #F9FAF8;
+    --logo-font-size: 24px;
+    --btn-color: #3882F6;
+    --btn-hover-border: 3px solid var(--secondary-color);
+    --btn-clicked-color: #0050d0;
+    --info-color: #1F2937;
+    --info-font-size: 36px;
+    --info-font-weight: extra-bold;
+    --quote-bg: #E5E7EB;
+    --quote-color: #1F2937;
+    --quote-font-size: 36px;
+    --quote-font-weight: light;
+    --quote-font-style: italic;
+}
+
+/* Remove Default Margins and Paddings */
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* General Styles Here*/
+button
+{
+    background-color: var(--btn-color);
+    border: none;
+    border-radius: 7px;
+    font-size: var(--secondary-font-size);
+    color: var(--secondary-color);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 25px;
+}
+
+button:hover
+{
+    border: var(--btn-hover-border);
+}
+
+button:active
+{
+    background-color: var(--btn-clicked-color);
+}
+
+/* Style the Header Here */
+header
+{
+    background-color: var(--dark-bg);
+    padding: 30px 100px 80px 100px;
+}
+
+header nav ul
+{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 64fr 12fr 12fr 12fr;
+    grid-template-rows: 100fr;
+    align-items:center;
+}
+
+header nav ul li a
+{
+    font-size: var(--secondary-font-size);
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+header nav ul li img
+{
+    width: 20%;
+    min-width: 120px;
+    max-width: 160px;
+}
+
+div#header-content
+{
+    display: grid;
+    grid-template-columns: 70fr 30fr;
+    grid-template-rows: 100fr;
+    align-items: center;
+}
+
+div#header-text-container > *
+{
+    margin-bottom: 10px;
+}
+
+div#header-text-container > h1
+{
+    font-size: var(--main-font-size);
+    color: var(--main-color);
+    font-weight: var(--main-font-weight);
+}
+
+div#header-text-container > p
+{
+    font-size: var(--secondary-font-size);
+    color: var(--secondary-color);
+}
+
+div#header-img-container
+{
+    position: relative;
+    top: 4px;
+}
+
+div#header-img-container > img
+{
+    width: 80%;
+    min-width: 300px;
+    max-width: 450px;
+}
