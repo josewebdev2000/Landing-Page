@@ -4,17 +4,18 @@
     --dark-bg: #1F2937;
     --main-color: #F9FAF8;
     --main-font-size: 48px;
-    --main-font-weight: extra-bold;
+    --main-font-weight: bold;
     --secondary-color: #E5E7EB;
     --secondary-font-size: 18px;
     --logo-color: #F9FAF8;
     --logo-font-size: 24px;
     --btn-color: #3882F6;
-    --btn-hover-border: 3px solid var(--secondary-color);
+    --btn-hover-color: #2a75ee;
+    --btn-border: 3px solid var(--main-color);
     --btn-clicked-color: #0050d0;
     --info-color: #1F2937;
     --info-font-size: 36px;
-    --info-font-weight: extra-bold;
+    --info-font-weight: bold;
     --quote-bg: #E5E7EB;
     --quote-color: #1F2937;
     --quote-font-size: 36px;
@@ -30,6 +31,11 @@
 }
 
 /* General Styles Here*/
+p
+{
+    font-size: var(--secondary-font-size);
+}
+
 button
 {
     background-color: var(--btn-color);
@@ -47,7 +53,7 @@ button
 
 button:hover
 {
-    border: var(--btn-hover-border);
+    background-color: var(--btn-hover-color);
 }
 
 button:active
@@ -60,6 +66,11 @@ header
 {
     background-color: var(--dark-bg);
     padding: 30px 100px 80px 100px;
+}
+
+header nav
+{
+    margin-bottom: 50px;
 }
 
 header nav ul
@@ -107,7 +118,6 @@ div#header-text-container > h1
 
 div#header-text-container > p
 {
-    font-size: var(--secondary-font-size);
     color: var(--secondary-color);
 }
 
@@ -122,4 +132,126 @@ div#header-img-container > img
     width: 80%;
     min-width: 300px;
     max-width: 450px;
+}
+
+/* Style Card Section Here */
+section#cards-section
+{
+    padding: 40px;
+}
+
+h2.cards-header
+{
+    text-align: center;
+    font-size: var(--info-font-size);
+    color: var(--info-color);
+    font-weight: var(--info-font-weight);
+    margin-bottom: 50px;
+
+}
+
+section.cards-container
+{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+
+article
+{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+article > img
+{
+    width: 20%;
+    min-width: 200px;
+    max-width: 250px;
+    border: 5px solid var(--btn-color);
+    border-radius: 15px;
+}
+
+article > p
+{
+    margin: 15px;
+    text-align: center;
+    color: var(--info-color);
+}
+
+/*Style Quote Section Here */
+section.blockquote-container
+{
+    background-color: var(--quote-bg);
+    padding: 40px;
+}
+
+blockquote
+{
+    padding: 80px;
+}
+
+blockquote > p
+{
+    font-size: var(--quote-font-size);
+    font-weight: var(--quote-font-weight);
+    font-style: var(--quote-font-style);
+}
+
+blockquote > cite
+{
+    float: right;
+    color: var(--quote-color);
+
+}
+
+blockquote > cite::after
+{
+    clear: right;
+}
+
+/* Style the Call to Action Section Here */
+section.call-to-action-container
+{
+    background-color: var(--btn-color);
+    margin: 100px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 80fr 20fr;
+    grid-template-rows: 100fr;
+    align-items: center;
+    border-radius: 10px;
+}
+
+div.call-to-action-text-wrapper > h3
+{
+    font-size: var(--logo-font-size);
+    color: var(--logo-color);
+    font-weight: var(--info-font-weight);
+}
+
+div.call-to-action-text-wrapper > p
+{
+    font-size: var(--secondary-font-size);
+    color: var(--secondary-color);
+}
+
+button.call-to-action-btn
+{
+    border: var(--btn-border);
+}
+
+/* Style the Footer Here*/
+footer
+{
+    background-color: var(--dark-bg);
+    color: var(--secondary-color);
+    font-size: var(--secondary-font-size);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
